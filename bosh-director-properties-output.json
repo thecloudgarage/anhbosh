@@ -1,0 +1,61 @@
+{
+  "director_configuration": {
+    "ntp_servers_string": "0.amazon.pool.ntp.org, 1.amazon.pool.ntp.org, 2.amazon.pool.ntp.org, 3.amazon.pool.ntp.org",
+    "resurrector_enabled": true,
+    "director_hostname": null,
+    "max_threads": null,
+    "custom_ssh_banner": null,
+    "opentsdb_ip": null,
+    "director_worker_count": 5,
+    "post_deploy_enabled": false,
+    "bosh_recreate_on_next_deploy": false,
+    "bosh_director_recreate_on_next_deploy": false,
+    "bosh_recreate_persistent_disks_on_next_deploy": false,
+    "retry_bosh_deploys": false,
+    "keep_unreachable_vms": false,
+    "identification_tags": {},
+    "skip_director_drain": false,
+    "job_configuration_on_tmpfs": false,
+    "nats_max_payload_mb": null,
+    "database_type": "internal",
+    "blobstore_type": "local",
+    "local_blobstore_options": {
+      "enable_signed_urls": true
+    },
+    "hm_pager_duty_options": {
+      "enabled": false
+    },
+    "hm_emailer_options": {
+      "enabled": false
+    },
+    "encryption": {
+      "keys": [],
+      "providers": []
+    }
+  },
+  "dns_configuration": {
+    "excluded_recursors": [],
+    "recursor_selection": null,
+    "recursor_timeout": null,
+    "handlers": []
+  },
+  "security_configuration": {
+    "trusted_certificates": null,
+    "generate_vm_passwords": true,
+    "opsmanager_root_ca_trusted_certs": true
+  },
+  "syslog_configuration": {
+    "enabled": false
+  },
+  "iaas_configuration": {
+    "guid": "98e9e050008466e55e7f",
+    "name": "default",
+    "additional_cloud_properties": {},
+    "iam_instance_profile": "TANZU_IAM_INSTANCE_PROFILE",
+    "security_group": "sg-0a99f86ee697d760a",
+    "key_pair_name": "tanzu",
+    "region": "us-east-1",
+    "encrypted": false,
+    "kms_key_arn": null
+  }
+}
