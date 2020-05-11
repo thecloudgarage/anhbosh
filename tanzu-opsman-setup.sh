@@ -104,8 +104,9 @@ sudo rm -rf $redisPivnetProductName
 sudo curl -vv --progress-bar -H 'Authorization: bearer '"$uaaToken"'' -k -X POST https://localhost/api/v0/available_products -F \
   'product[file]=@'"$awsservicebrokerPivnetProductName"''
 sudo rm -rf $awsservicebrokerPivnetProductName
-export uaaToken=$( sudo curl -s -k -H 'Accept: application/json;charset=utf-8' -d 'grant_type=password' -d 'username=admin' -d 'password=admin' \
-                  -u 'opsman:' https://localhost/uaa/oauth/token |  jq --raw-output '.access_token' )
+export uaaToken=$( sudo curl -s -k -H 'Accept: application/json;charset=utf-8' \
+  -d 'grant_type=password' -d 'username=admin' -d 'password=admin' \
+  -u 'opsman:' https://localhost/uaa/oauth/token |  jq --raw-output '.access_token' )
 curl "https://localhost/api/v0/staged/products" -k \
   -X POST \
   -H 'Authorization: Bearer '"$uaaToken"'' \
